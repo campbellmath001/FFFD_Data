@@ -1,7 +1,7 @@
 import sys
 from datetime import datetime, timedelta
 
-logfile = f"/home/terrapin/FFFDlogs/FFFD_log_run_{datetime.today().strftime('%Y-%m-%d-%H-%M-%S')}"
+logfile = f"/home/michael/FFFDlogs/FFFD_log_run_{datetime.today().strftime('%Y-%m-%d-%H-%M-%S')}"
 
 import logging
 logger = logging.getLogger(__name__)
@@ -11,7 +11,7 @@ logging.basicConfig(filename = logfile, level = logging.DEBUG)
 import pandas as pd
 
 yesterday = (datetime.today() - timedelta(days = 1)).strftime('%Y-%m-%d')
-csv_filename = f"/home/terrapin/FFFD_Data/FFFD_{yesterday}.csv"
+csv_filename = f"/home/michael/FFFD_Data/FFFD_{yesterday}.csv"
 
 logger.debug(f'Beginning download of data for {yesterday}')
 try:
